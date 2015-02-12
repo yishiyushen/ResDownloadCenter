@@ -4,5 +4,6 @@
     <string name="app_name">ResDownloadCenter</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="download_center">下载中心</string>
 
 </resources>
