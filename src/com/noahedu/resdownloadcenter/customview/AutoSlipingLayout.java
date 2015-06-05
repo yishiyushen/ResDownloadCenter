@@ -28,6 +28,7 @@ public class AutoSlipingLayout extends RelativeLayout {
 	private boolean isLayout = false;
 	private MyTimer mTimer;
 	private Handler mHandler = new Handler(){
+		@Override
 		public void handleMessage(android.os.Message msg) {
 			if(curState == SLIPING_OPEN_STATE){
 				leftViewX += MOVE_SPEED;

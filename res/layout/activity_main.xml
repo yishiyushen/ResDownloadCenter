@@ -3,101 +3,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.noahedu.resdownloadcenter.MainActivity" >
+    tools:context="com.noahedu.resdownloadcenter.ResLoadCenterMainActivity" >
 
     <RelativeLayout
+        android:id="@+id/leading_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:padding="2dp"
-        android:gravity="center_vertical">
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/navigation_bar"
+        android:padding="2dp" >
 
         <ImageView
             android:id="@+id/img_back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             android:background="@drawable/ic_back"
-            android:clickable="true"/>
+            android:clickable="true" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/download_center" 
-            android:textSize="30sp"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            android:text="@string/download_center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
 
-        <Button
+        <ImageView
             android:id="@+id/manager_bt"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:background="@drawable/btn_tv2"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="管理"
-            />
-        
+            android:background="@drawable/down_manager"
+             />
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp">
+        android:background="@color/search_bar_bkcolor">
 
         <Button
             android:id="@+id/filter_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" 
-            android:text="塞选" />
-        <LinearLayout 
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/filter_bt" />
+
+        <Button
+            android:id="@+id/sweep_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/scanning" />
+         
+         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="55dp"
-            android:padding="5dp"
-            android:background="@drawable/input_select"
+            android:background="@drawable/search_backgroud"
+             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@id/sweep_bt"
+             android:layout_toRightOf="@id/filter_bt"
             android:gravity="center_vertical"
-            android:layout_weight="10" >
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp" >
 
             <EditText
-                android:id="@+id/editText1"
-                android:layout_width="wrap_content"
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="10" 
-                android:background="@android:color/transparent">
+                android:layout_centerVertical="true"
+                android:textSize="22sp"
+                android:hint="@string/please_input"
+                android:background="@android:color/transparent" >
             </EditText>
-            <Button 
+
+            <Button
                 android:id="@+id/search_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" 
-                android:background="@drawable/search_bt_selector"/>
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" 
-            android:text="扫描" />
-		
-    </LinearLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search_bt_selector" />
+        </RelativeLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="5dp">
-		<include layout="@layout/menu_content" />
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="340dp"
-            android:visibility="invisible" />
-        
+        android:background="@color/content_bkcolor">
+
+        <include layout="@layout/menu_content" />
+
+		
     </RelativeLayout>
 
 </LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="70dp"
+    android:padding="10dp">
+
+    <CheckBox
+        android:id="@+id/checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/check_box_style"
+        />
+
+    <TextView
+        android:id="@+id/resource_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/checked"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:text="TextView" />
+    <TextView android:id="@+id/progress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:layout_marginRight="@dimen/associate_list_item_progest_tv_margin_r"
+         />"
+
+    <com.noahedu.resdownloadcenter.customview.DownProgessButton
+        android:id="@+id/down_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="down" />
+
+</RelativeLayout>

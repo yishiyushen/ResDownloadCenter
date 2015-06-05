@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	<dimen name="menu_layout_with">200dp</dimen>
+	<dimen name="grid_view_colum_w">100dp</dimen>
+	<dimen name="grid_view_colum_subj_w">80dp</dimen>
+	<dimen name="grid_view_colum_w2">100dp</dimen>
+	<dimen name="scrollview_margin_left">5dp</dimen>
+	<dimen name="txSize03">18dp</dimen>
+	<dimen name="tab_bt_margin_left">10dp</dimen>
+	<dimen name="contents_text_size">24dp</dimen>
+	<dimen name="book_cover_small_w">100dp</dimen>
+	<dimen name="book_cover_small_h">130dp</dimen>
+	<dimen name="book_cover_large_w">180dp</dimen>
+	<dimen name="book_cover_large_h">250dp</dimen>
+	<dimen name="book_detail_info_h">290dp</dimen>
+	<dimen name="main_list_item_txt_w">330dp</dimen>
+	<dimen name="associate_list_item_progest_tv_margin_r">60dp</dimen>
+	<dimen name="pop_menu_layout_h">35dp</dimen>
+	<dimen name="pop_men_layout_subj_h">70dp</dimen>
+	<dimen name="pop_menu_layout_margin_top">10dp</dimen>
+	<dimen name="pop_menu_publish_h">170dp</dimen>
+	<dimen name="menu_content_w">230dp</dimen>
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ff3ec01a</color>
+    <color name="viewfinder_mask">#60000000</color>
+    
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="search_bar_bkcolor">#cfeafd</color>
+    <color name="content_bkcolor">#f7eee7</color>
+    <color name="listview_bkcolor">#00befe</color>
+    <color name="popview_txt_color">#5e93b2</color>
+</resources>

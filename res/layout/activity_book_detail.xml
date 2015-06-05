@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/book_detail_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/leading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/navigation_bar"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/download_center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/book_img"
+            android:layout_width="@dimen/book_cover_large_w"
+            android:layout_height="@dimen/book_cover_large_h"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+             />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/book_img"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/book_img"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/book_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="name"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detail_item_txt_style"
+                android:text="type" />
+
+            <TextView
+                android:id="@+id/subject_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detail_item_txt_style"
+                android:text="subject" />
+
+            <TextView
+                android:id="@+id/grade_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	style="@style/detail_item_txt_style"
+                android:text="grade" />
+
+            <TextView
+                android:id="@+id/press_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detail_item_txt_style"
+                android:text="press" />
+
+            <TextView
+                android:id="@+id/references_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detail_item_txt_style"
+                android:text="references" />
+
+            <TextView
+                android:id="@+id/size_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detail_item_txt_style"
+                android:text="size" />
+
+            <TextView
+                android:id="@+id/update_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detail_item_txt_style"
+                android:text="update_time" />
+    
+        </LinearLayout>
+        <com.noahedu.resdownloadcenter.customview.DownProgessButton
+                android:id="@+id/down_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_alignLeft="@id/linearLayout1"
+                android:layout_below="@id/linearLayout1"
+                android:layout_marginTop="2dp"/>
+            <TextView 
+                android:id="@+id/progress_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/down_bt"
+                android:layout_toRightOf="@id/down_bt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:visibility="invisible"/>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="355dp" >
+
+            <LinearLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="50dp">
+
+        <CheckBox
+            android:id="@+id/check_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:button="@drawable/check_box_style"
+            android:text="@string/select_all" />
+
+        <Button
+            android:id="@+id/down_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            android:background="@drawable/down_all" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            >
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+</LinearLayout>

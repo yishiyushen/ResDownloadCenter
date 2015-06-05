@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.noahedu.resdownloadcenter.customview.AutoSlipingLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   	android:id="@+id/auto_slip_layout"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/auto_slip_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
 
-	<LinearLayout 
-	    android:id="@+id/fist_menu_content"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:orientation="horizontal"
-	    />"
-    
     <ListView
         android:id="@+id/menu_list"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/menu_content_w"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray"
-        android:visibility="invisible"
-		>
+        android:layout_weight="1"
+        android:background="@color/listview_bkcolor"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="1dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none" >
     </ListView>
 
-</com.noahedu.resdownloadcenter.customview.AutoSlipingLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_weight="10">
+
+        <com.noahedu.resdownloadcenter.customview.PullToRefreshLayout
+            android:id="@+id/pull_reflesh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+             >
+
+            <include layout="@layout/refresh_head" />
+
+            <com.noahedu.resdownloadcenter.customview.PullableListView
+                android:id="@+id/book_info_listv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" >
+            </com.noahedu.resdownloadcenter.customview.PullableListView>
+
+            <include layout="@layout/load_more" />
+        </com.noahedu.resdownloadcenter.customview.PullToRefreshLayout>
+
+        <TextView
+            android:id="@+id/sorry_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sorry_search_no"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+</LinearLayout>

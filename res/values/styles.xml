@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -16,5 +16,35 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+        <style name="Theme.Dialog.Translucent" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textSize">@dimen/txSize03</item>
+    </style>
 
+    <style name="Theme.Dialog.Translucent.NoTitleBar" parent="Theme.Dialog.Translucent">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="main_list_item_txt_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="detail_item_txt_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="pop_data_txt_style">
+        <item name="android:textSize">22sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/popview_txt_color</item>
+    </style>
+    <style name="condition_text_selected">
+        <item name="android:textColor">@android:color/holo_orange_light</item>
+    </style>
+     <style name="condition_text">
+        <item name="android:textColor">@color/popview_txt_color</item>
+    </style>
 </resources>

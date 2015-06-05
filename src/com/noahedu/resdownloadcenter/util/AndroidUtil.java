@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.graphics.Rect;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
@@ -29,7 +28,7 @@ public class AndroidUtil {
 	 */
 	public static boolean IsConnect(Context ctx) {
 		ConnectivityManager manager = (ConnectivityManager) ctx
-				.getSystemService(ctx.CONNECTIVITY_SERVICE);
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo info = manager
 				.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 		State stata = null;
